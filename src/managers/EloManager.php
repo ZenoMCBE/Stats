@@ -87,8 +87,7 @@ final class EloManager implements DataCache, DefaultDataCache {
      */
     public function reduce(string|Player $player, int $amount): void {
         $playerName = Utils::getPlayerName($player, true);
-        $finalAmount = max(0, $this->get($player) - $amount);
-        $this->cache[$playerName] -= $finalAmount;
+        $this->cache[$playerName] -= abs($amount);
         if ($this->get($player) < 0) {
             $this->set($player, 0);
         }
