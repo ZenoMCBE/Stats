@@ -123,8 +123,12 @@ final class StatsManager implements DataCache, DefaultDataCache {
         $playerName = Utils::getPlayerName($player, true);
         $this->add($player, StatsIds::SCORE, $score);
         foreach ($stats as $stat => $value) {
-            if (array_key_exists($stat, $this->cache[$playerName])) {
+            if (array_key_exists($stat, $this->cache[$playerName]) && $stat !== StatsIds::BEST_KILLSTREAK) {
                 $this->add($player, $stat, $value);
+            } else if ($stat == StatsIds::BEST_KILLSTREAK) {
+                if ($this->get($player, StatsIds::BEST_KILLSTREAK) < $value) {
+                    $this->set($player, StatsIds::BEST_KILLSTREAK, $value);
+                }
             } else {
                 $this->set($player, $stat, $value);
             }
@@ -333,7 +337,6 @@ final class StatsManager implements DataCache, DefaultDataCache {
             StatsIds::KILL => 0,
             StatsIds::ASSIST => 0,
             StatsIds::DEATH => 0,
-            StatsIds::KILLSTREAK => 0,
             StatsIds::BEST_KILLSTREAK => 0,
             StatsIds::ARROW_SHOT => 0,
             StatsIds::ARROW_HIT => 0,
@@ -371,7 +374,6 @@ final class StatsManager implements DataCache, DefaultDataCache {
             StatsIds::KILL => "Kill(s)",
             StatsIds::ASSIST => "Assistance(s)",
             StatsIds::DEATH => "Mort(s)",
-            StatsIds::KILLSTREAK => "Série de kill(s) actuel",
             StatsIds::BEST_KILLSTREAK => "Meilleure série de kill(s)",
             StatsIds::ARROW_SHOT => "Flèche(s) tirée(s)",
             StatsIds::ARROW_HIT => "Flèche(s) touchée(s)",

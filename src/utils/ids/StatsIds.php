@@ -11,7 +11,6 @@ interface StatsIds {
     public const KILL = "kill";
     public const ASSIST = "assist";
     public const DEATH = "death";
-    public const KILLSTREAK = "killstreak";
     public const BEST_KILLSTREAK = "best-killstreak";
     public const ARROW_SHOT = "arrow-shot";
     public const ARROW_HIT = "arrow-hit";
@@ -29,7 +28,6 @@ interface StatsIds {
         self::KILL,
         self::ASSIST,
         self::DEATH,
-        self::KILLSTREAK,
         self::BEST_KILLSTREAK,
         self::ARROW_SHOT,
         self::ARROW_HIT,
