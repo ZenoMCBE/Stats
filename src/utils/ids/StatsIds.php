@@ -27,7 +27,6 @@ interface StatsIds {
         self::WIN,
         self::LOSE,
         self::SCORE,
-        self::ELO,
         self::KILL,
         self::ASSIST,
         self::DEATH,
