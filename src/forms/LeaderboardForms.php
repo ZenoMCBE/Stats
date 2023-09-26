@@ -118,6 +118,7 @@ final class LeaderboardForms {
         $content .= "§fKill(s)§8: §f" . $statsApi->get($playerName, StatsIds::KILL) . "\n";
         $content .= "§fAssistance(s)§8: §f" . $statsApi->get($playerName, StatsIds::ASSIST) . "\n";
         $content .= "§fMort(s)§8: §f" . $statsApi->get($playerName, StatsIds::DEATH) . "\n";
+        $content .= "§fMort(s) dans le vide§8: §f" . $statsApi->get($playerName, StatsIds::VOID_DEATH) . "\n";
         $content .= "§fK/D§8: §f" . $statsApi->calculateKdr($playerName) . "\n";
         $content .= "§fK+A/D§8: §f" . $statsApi->calculateKadr($playerName) . "\n";
         $content .= "§fKill(s) par partie jouée§8: §f" . $statsApi->calculateKillPerGame($playerName) . "\n";
