@@ -2,6 +2,8 @@
 
 namespace zenostats\utils\ids;
 
+use elo\Elo;
+
 interface StatsIds {
 
     public const PLAYED = "played";
@@ -27,6 +29,7 @@ interface StatsIds {
         self::WIN,
         self::LOSE,
         self::SCORE,
+        self::ELO,
         self::KILL,
         self::ASSIST,
         self::DEATH,
