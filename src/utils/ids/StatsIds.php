@@ -2,8 +2,6 @@
 
 namespace zenostats\utils\ids;
 
-use elo\Elo;
-
 interface StatsIds {
 
     public const PLAYED = "played";
