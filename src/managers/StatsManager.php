@@ -371,6 +371,7 @@ final class StatsManager implements DataCache, DefaultDataCache {
             StatsIds::WIN => "Partie(s) gagnée(s)",
             StatsIds::LOSE => "Partie(s) perdue(s)",
             StatsIds::SCORE => "Score global",
+            StatsIds::ELO => "Elo(s)",
             StatsIds::KILL => "Kill(s)",
             StatsIds::ASSIST => "Assistance(s)",
             StatsIds::DEATH => "Mort(s)",
@@ -381,8 +382,7 @@ final class StatsManager implements DataCache, DefaultDataCache {
             StatsIds::DAMAGE_DEALED => "Dégât(s) infligé(s)",
             StatsIds::DAMAGE_TAKEN => "Dégât(s) subit(s)",
             StatsIds::GOLDEN_APPLE_EATEN => "Gapple(s) mangée(s)",
-            StatsIds::CRIT => "Coup(s) critique(s)",
-            "elo" => "Elo(s)"
+            StatsIds::CRIT => "Coup(s) critique(s)"
         };
     }
 

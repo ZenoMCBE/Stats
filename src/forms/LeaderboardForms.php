@@ -51,7 +51,7 @@ final class LeaderboardForms {
             if (!is_null($data)) {
                 if (
                     $statsApi->isValidStats($data) ||
-                    $data == "elo"
+                    $data == StatsIds::ELO
                 ) {
                     $this->returnForm($player, $this->showLeaderboard($data));
                 }
@@ -59,8 +59,8 @@ final class LeaderboardForms {
         });
         $form->setTitle("§l§q» §r§aClassements §l§q«§r");
         $form->setContent(Constants::PREFIX . "§fVeuillez cliquer sur une catégorie pour consulter le classement de celle-ci !");
-        $form->addButton("Elo(s)", label: "elo");
-        foreach ($statsApi->getAllStats() as $stat) {
+        $allStats = array_merge($statsApi->getAllStats(), [StatsIds::ELO]);
+        foreach ($allStats as $stat) {
             $form->addButton($statsApi->getStatsNameByStats($stat), label: $stat);
         }
         return $form;
@@ -81,7 +81,7 @@ final class LeaderboardForms {
                 }
             }
         });
-        $top = $stats == "elo" ? $eloApi->getTop() : $statsApi->getTopStats($stats);
+        $top = $stats == StatsIds::ELO ? $eloApi->getTop() : $statsApi->getTopStats($stats);
         $form->setTitle("§r§l§q» §r§aClassement " . $statsApi->getStatsNameByStats($stats) . " §l§q«");
         $form->setContent(Constants::PREFIX . "§fVoici le classement de la catégorie §a" . strtolower($statsApi->getStatsNameByStats($stats)) . " §f! Veuillez cliquer sur un joueur pour consulter ses statistiques !");
         foreach ($top as $player => $stat) {

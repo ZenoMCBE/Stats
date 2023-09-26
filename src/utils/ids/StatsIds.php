@@ -8,6 +8,7 @@ interface StatsIds {
     public const WIN = "win";
     public const LOSE = "lose";
     public const SCORE = "score";
+    public const ELO = "elo";
     public const KILL = "kill";
     public const ASSIST = "assist";
     public const DEATH = "death";
