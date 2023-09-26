@@ -59,8 +59,7 @@ final class LeaderboardForms {
         });
         $form->setTitle("§l§q» §r§aClassements §l§q«§r");
         $form->setContent(Constants::PREFIX . "§fVeuillez cliquer sur une catégorie pour consulter le classement de celle-ci !");
-        $allStats = array_merge($statsApi->getAllStats(), [StatsIds::ELO]);
-        foreach ($allStats as $stat) {
+        foreach ($statsApi->getAllStats() as $stat) {
             $form->addButton($statsApi->getStatsNameByStats($stat), label: $stat);
         }
         return $form;
