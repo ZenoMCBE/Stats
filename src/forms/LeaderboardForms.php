@@ -37,7 +37,7 @@ final class LeaderboardForms {
         });
         $form->setTitle("§l§q» §r§aClassements §l§q«§r");
         $form->setContent("§l§q» §r§fBienvenue dans le menu des §aclassements §f!");
-        $form->addButton("§8Consulter les catérogies");
+        $form->addButton("§8Consulter les catégories");
         $form->addButton("§8Chercher un joueur");
         return $form;
     }
