@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\invmenu\transaction;
+namespace stats\librairies\invmenu\transaction;
 
 use pocketmine\inventory\transaction\action\SlotChangeAction;
 use pocketmine\inventory\transaction\InventoryTransaction;

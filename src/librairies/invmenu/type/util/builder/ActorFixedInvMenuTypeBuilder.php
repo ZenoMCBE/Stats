@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\invmenu\type\util\builder;
+namespace stats\librairies\invmenu\type\util\builder;
 
-use zenostats\librairies\invmenu\type\ActorFixedInvMenuType;
+use stats\librairies\invmenu\type\ActorFixedInvMenuType;
 use pocketmine\network\mcpe\protocol\types\entity\EntityMetadataFlags;
 use pocketmine\network\mcpe\protocol\types\entity\EntityMetadataProperties;
 

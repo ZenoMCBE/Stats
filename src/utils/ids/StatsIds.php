@@ -1,6 +1,6 @@
 <?php
 
-namespace zenostats\utils\ids;
+namespace stats\utils\ids;
 
 interface StatsIds {
 

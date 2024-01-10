@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\simplepackethandler\monitor;
+namespace stats\librairies\simplepackethandler\monitor;
 
 use Closure;
 use pocketmine\network\mcpe\NetworkSession;

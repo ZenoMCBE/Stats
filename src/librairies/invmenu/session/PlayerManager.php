@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\invmenu\session;
+namespace stats\librairies\invmenu\session;
 
-use zenostats\librairies\invmenu\session\network\handler\PlayerNetworkHandlerRegistry;
-use zenostats\librairies\invmenu\session\network\PlayerNetwork;
+use stats\librairies\invmenu\session\network\handler\PlayerNetworkHandlerRegistry;
+use stats\librairies\invmenu\session\network\PlayerNetwork;
 use pocketmine\event\EventPriority;
 use pocketmine\event\player\PlayerLoginEvent;
 use pocketmine\event\player\PlayerQuitEvent;

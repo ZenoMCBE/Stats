@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\simplepackethandler\monitor;
+namespace stats\librairies\simplepackethandler\monitor;
 
 use Closure;
 use ReflectionException;
-use zenostats\librairies\simplepackethandler\utils\Utils;
+use stats\librairies\simplepackethandler\utils\Utils;
 use pocketmine\event\EventPriority;
 use pocketmine\event\HandlerListManager;
 use pocketmine\event\RegisteredListener;

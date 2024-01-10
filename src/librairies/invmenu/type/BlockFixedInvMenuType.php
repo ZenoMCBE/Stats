@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\invmenu\type;
+namespace stats\librairies\invmenu\type;
 
-use zenostats\librairies\invmenu\inventory\InvMenuInventory;
-use zenostats\librairies\invmenu\InvMenu;
-use zenostats\librairies\invmenu\type\graphic\BlockInvMenuGraphic;
-use zenostats\librairies\invmenu\type\graphic\InvMenuGraphic;
-use zenostats\librairies\invmenu\type\graphic\network\InvMenuGraphicNetworkTranslator;
-use zenostats\librairies\invmenu\type\util\InvMenuTypeHelper;
+use stats\librairies\invmenu\inventory\InvMenuInventory;
+use stats\librairies\invmenu\InvMenu;
+use stats\librairies\invmenu\type\graphic\BlockInvMenuGraphic;
+use stats\librairies\invmenu\type\graphic\InvMenuGraphic;
+use stats\librairies\invmenu\type\graphic\network\InvMenuGraphicNetworkTranslator;
+use stats\librairies\invmenu\type\util\InvMenuTypeHelper;
 use pocketmine\block\Block;
 use pocketmine\inventory\Inventory;
 use pocketmine\player\Player;

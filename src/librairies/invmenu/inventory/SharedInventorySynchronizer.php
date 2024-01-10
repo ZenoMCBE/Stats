@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\invmenu\inventory;
+namespace stats\librairies\invmenu\inventory;
 
 use pocketmine\inventory\Inventory;
 use pocketmine\inventory\InventoryListener;

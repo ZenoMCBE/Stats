@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\invmenu\type\graphic\network;
+namespace stats\librairies\invmenu\type\graphic\network;
 
 use InvalidArgumentException;
-use zenostats\librairies\invmenu\session\InvMenuInfo;
-use zenostats\librairies\invmenu\session\PlayerSession;
-use zenostats\librairies\invmenu\type\graphic\PositionedInvMenuGraphic;
+use stats\librairies\invmenu\session\InvMenuInfo;
+use stats\librairies\invmenu\session\PlayerSession;
+use stats\librairies\invmenu\type\graphic\PositionedInvMenuGraphic;
 use pocketmine\network\mcpe\protocol\ContainerOpenPacket;
 use pocketmine\network\mcpe\protocol\types\BlockPosition;
 

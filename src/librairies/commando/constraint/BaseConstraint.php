@@ -27,9 +27,9 @@
  *
  */
 
-namespace zenostats\librairies\commando\constraint;
+namespace stats\librairies\commando\constraint;
 
-use zenostats\librairies\commando\IRunnable;
+use stats\librairies\commando\IRunnable;
 use pocketmine\command\CommandSender;
 
 abstract class BaseConstraint

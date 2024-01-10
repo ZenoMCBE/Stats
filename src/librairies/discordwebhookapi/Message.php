@@ -3,7 +3,7 @@
 
 declare(strict_types = 1);
 
-namespace zenostats\librairies\discordwebhookapi;
+namespace stats\librairies\discordwebhookapi;
 
 use JsonSerializable;
 

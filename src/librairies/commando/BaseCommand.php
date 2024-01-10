@@ -27,12 +27,12 @@
  *
  */
 
-namespace zenostats\librairies\commando;
+namespace stats\librairies\commando;
 
-use zenostats\librairies\commando\constraint\BaseConstraint;
-use zenostats\librairies\commando\exception\InvalidErrorCode;
-use zenostats\librairies\commando\traits\ArgumentableTrait;
-use zenostats\librairies\commando\traits\IArgumentable;
+use stats\librairies\commando\constraint\BaseConstraint;
+use stats\librairies\commando\exception\InvalidErrorCode;
+use stats\librairies\commando\traits\ArgumentableTrait;
+use stats\librairies\commando\traits\IArgumentable;
 use InvalidArgumentException;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;

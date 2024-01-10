@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\invmenu\type\graphic\network;
+namespace stats\librairies\invmenu\type\graphic\network;
 
-use zenostats\librairies\invmenu\session\InvMenuInfo;
-use zenostats\librairies\invmenu\session\PlayerSession;
+use stats\librairies\invmenu\session\InvMenuInfo;
+use stats\librairies\invmenu\session\PlayerSession;
 use pocketmine\network\mcpe\protocol\ContainerOpenPacket;
 
 final class WindowTypeInvMenuGraphicNetworkTranslator implements InvMenuGraphicNetworkTranslator{

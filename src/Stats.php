@@ -1,16 +1,15 @@
 <?php
 
-namespace zenostats;
+namespace stats;
 
-use JsonException;
+use pocketmine\event\EventPriority;
+use pocketmine\event\plugin\PluginDisableEvent;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\SingletonTrait;
-use zenostats\managers\EloManager;
-use zenostats\managers\LeagueManager;
-use zenostats\managers\LoadersManager;
-use zenostats\managers\StatsManager;
+use ReflectionException;
+use stats\managers\{EloManager, LeagueManager, LoadersManager, StatsManager};
 
-final class ZenoStats extends PluginBase {
+final class Stats extends PluginBase {
 
     use SingletonTrait;
 
@@ -23,23 +22,26 @@ final class ZenoStats extends PluginBase {
 
     /**
      * @return void
+     * @throws ReflectionException
      */
     protected function onEnable(): void {
         LoadersManager::getInstance()->loadAll();
 
-        $this->getLogger()->notice("Zeno Stats a été activé avec succès !");
+        $this->getServer()->getPluginManager()->registerEvent(PluginDisableEvent::class, function (PluginDisableEvent $event): void {
+            if ($event->getPlugin()->getName() == $this->getName()) {
+                LoadersManager::getInstance()->unloadAll();
+            }
+        }, EventPriority::LOWEST, $this);
+
+        $this->getLogger()->notice("Stats activé.");
     }
 
     /**
      * @return void
-     * @throws JsonException
      */
     protected function onDisable(): void {
-        LoadersManager::getInstance()->unloadAll();
-
-        $this->getLogger()->notice("Zeno Stats a été activé avec succès !");
+        $this->getLogger()->notice("Stats désactivé.");
     }
-
 
     /**
      * @return EloManager

@@ -1,6 +1,6 @@
 <?php
 
-namespace zenostats\datas;
+namespace stats\datas;
 
 use pocketmine\player\Player;
 

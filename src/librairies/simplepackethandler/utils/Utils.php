@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\simplepackethandler\utils;
+namespace stats\librairies\simplepackethandler\utils;
 
 use Closure;
 use InvalidArgumentException;

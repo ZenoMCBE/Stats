@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\invmenu\session\network\handler;
+namespace stats\librairies\invmenu\session\network\handler;
 
 use Closure;
-use zenostats\librairies\invmenu\session\network\NetworkStackLatencyEntry;
+use stats\librairies\invmenu\session\network\NetworkStackLatencyEntry;
 
 final class ClosurePlayerNetworkHandler implements PlayerNetworkHandler{
 

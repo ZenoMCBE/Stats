@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\invmenu;
+namespace stats\librairies\invmenu;
 
 use InvalidArgumentException;
 use LogicException;
-use zenostats\librairies\invmenu\session\PlayerManager;
-use zenostats\librairies\invmenu\type\InvMenuTypeRegistry;
+use stats\librairies\invmenu\session\PlayerManager;
+use stats\librairies\invmenu\type\InvMenuTypeRegistry;
 use pocketmine\plugin\Plugin;
 use pocketmine\Server;
 

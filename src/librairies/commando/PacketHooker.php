@@ -27,11 +27,11 @@
  *
  */
 
-namespace zenostats\librairies\commando;
+namespace stats\librairies\commando;
 
-use zenostats\librairies\commando\exception\HookAlreadyRegistered;
-use zenostats\librairies\commando\store\SoftEnumStore;
-use zenostats\librairies\commando\traits\IArgumentable;
+use stats\librairies\commando\exception\HookAlreadyRegistered;
+use stats\librairies\commando\store\SoftEnumStore;
+use stats\librairies\commando\traits\IArgumentable;
 use pocketmine\command\CommandSender;
 use pocketmine\event\EventPriority;
 use pocketmine\event\Listener;
@@ -43,7 +43,7 @@ use pocketmine\network\mcpe\protocol\types\command\CommandParameter;
 use pocketmine\plugin\Plugin;
 use pocketmine\Server;
 use ReflectionClass;
-use zenostats\librairies\simplepackethandler\SimplePacketHandler;
+use stats\librairies\simplepackethandler\SimplePacketHandler;
 use function count;
 
 class PacketHooker implements Listener {

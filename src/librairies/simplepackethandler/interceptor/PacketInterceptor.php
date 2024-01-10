@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\simplepackethandler\interceptor;
+namespace stats\librairies\simplepackethandler\interceptor;
 
 use Closure;
 use pocketmine\plugin\Plugin;

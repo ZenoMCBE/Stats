@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\invmenu\type\util\builder;
+namespace stats\librairies\invmenu\type\util\builder;
 
-use zenostats\librairies\invmenu\type\graphic\network\ActorInvMenuGraphicNetworkTranslator;
+use stats\librairies\invmenu\type\graphic\network\ActorInvMenuGraphicNetworkTranslator;
 use pocketmine\entity\Entity;
 use pocketmine\network\mcpe\protocol\types\entity\EntityIds;
 use pocketmine\network\mcpe\protocol\types\entity\EntityMetadataCollection;

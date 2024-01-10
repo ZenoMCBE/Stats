@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\invmenu\type\graphic;
+namespace stats\librairies\invmenu\type\graphic;
 
 use LogicException;
-use zenostats\librairies\invmenu\type\graphic\network\InvMenuGraphicNetworkTranslator;
+use stats\librairies\invmenu\type\graphic\network\InvMenuGraphicNetworkTranslator;
 use pocketmine\inventory\Inventory;
 use pocketmine\math\Vector3;
 use pocketmine\player\Player;

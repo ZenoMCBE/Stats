@@ -1,10 +1,10 @@
 <?php
 
-namespace zenostats\managers;
+namespace stats\managers;
 
 use pocketmine\utils\Config;
 use pocketmine\utils\SingletonTrait;
-use zenostats\ZenoStats;
+use stats\Stats;
 
 final class ProvidersManager {
 
@@ -19,7 +19,7 @@ final class ProvidersManager {
      * @return void
      */
     public function loadProviders(): void {
-        $pluginDataFolder = ZenoStats::getInstance()->getDataFolder();
+        $pluginDataFolder = Stats::getInstance()->getDataFolder();
         $this->addProvider("Elo", new Config($pluginDataFolder . "Elo.json", Config::JSON));
         $this->addProvider("Stats", new Config($pluginDataFolder . "Stats.json", Config::JSON));
     }

@@ -1,17 +1,17 @@
 <?php
 
-namespace zenostats\managers;
+namespace stats\managers;
 
 use JsonException;
 use pocketmine\player\Player;
 use pocketmine\utils\Config;
 use pocketmine\utils\SingletonTrait;
-use zenostats\datas\DataCache;
-use zenostats\datas\DefaultDataCache;
-use zenostats\forms\LeaderboardForms;
-use zenostats\librairies\formapi\SimpleForm;
-use zenostats\utils\ids\StatsIds;
-use zenostats\utils\Utils;
+use stats\datas\DataCache;
+use stats\datas\DefaultDataCache;
+use stats\forms\LeaderboardForms;
+use stats\librairies\formapi\SimpleForm;
+use stats\utils\ids\StatsIds;
+use stats\utils\Utils;
 
 final class StatsManager implements DataCache, DefaultDataCache {
 

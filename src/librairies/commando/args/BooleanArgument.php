@@ -27,7 +27,7 @@
  *
  */
 
-namespace zenostats\librairies\commando\args;
+namespace stats\librairies\commando\args;
 
 use pocketmine\command\CommandSender;
 

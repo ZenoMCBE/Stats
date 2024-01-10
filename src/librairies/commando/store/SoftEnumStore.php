@@ -1,9 +1,9 @@
 <?php /** @noinspection PhpUnused */
 
-namespace zenostats\librairies\commando\store;
+namespace stats\librairies\commando\store;
 
 use pocketmine\network\mcpe\NetworkBroadcastUtils;
-use zenostats\librairies\commando\exception\CommandoException;
+use stats\librairies\commando\exception\CommandoException;
 use pocketmine\network\mcpe\protocol\ClientboundPacket;
 use pocketmine\network\mcpe\protocol\types\command\CommandEnum;
 use pocketmine\network\mcpe\protocol\UpdateSoftEnumPacket;

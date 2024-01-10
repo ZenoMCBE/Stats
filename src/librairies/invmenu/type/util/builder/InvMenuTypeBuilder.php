@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\invmenu\type\util\builder;
+namespace stats\librairies\invmenu\type\util\builder;
 
-use zenostats\librairies\invmenu\type\InvMenuType;
+use stats\librairies\invmenu\type\InvMenuType;
 
 interface InvMenuTypeBuilder{
 

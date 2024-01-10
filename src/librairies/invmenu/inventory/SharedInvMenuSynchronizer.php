@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\invmenu\inventory;
+namespace stats\librairies\invmenu\inventory;
 
-use zenostats\librairies\invmenu\InvMenu;
+use stats\librairies\invmenu\InvMenu;
 use pocketmine\inventory\Inventory;
 
 final class SharedInvMenuSynchronizer{

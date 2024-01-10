@@ -27,7 +27,7 @@
  *
  */
 
-namespace zenostats\librairies\commando\constraint;
+namespace stats\librairies\commando\constraint;
 
 use pocketmine\command\CommandSender;
 use pocketmine\player\Player;

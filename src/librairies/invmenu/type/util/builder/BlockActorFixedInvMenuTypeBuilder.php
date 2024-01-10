@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\invmenu\type\util\builder;
+namespace stats\librairies\invmenu\type\util\builder;
 
 use LogicException;
-use zenostats\librairies\invmenu\type\BlockActorFixedInvMenuType;
-use zenostats\librairies\invmenu\type\graphic\network\BlockInvMenuGraphicNetworkTranslator;
+use stats\librairies\invmenu\type\BlockActorFixedInvMenuType;
+use stats\librairies\invmenu\type\graphic\network\BlockInvMenuGraphicNetworkTranslator;
 
 final class BlockActorFixedInvMenuTypeBuilder implements InvMenuTypeBuilder{
 	use BlockInvMenuTypeBuilderTrait;

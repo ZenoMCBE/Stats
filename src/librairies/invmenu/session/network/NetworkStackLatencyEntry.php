@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\invmenu\session\network;
+namespace stats\librairies\invmenu\session\network;
 
 use Closure;
 

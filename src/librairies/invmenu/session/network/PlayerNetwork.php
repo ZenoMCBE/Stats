@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\invmenu\session\network;
+namespace stats\librairies\invmenu\session\network;
 
 use Closure;
 use InvalidArgumentException;
-use zenostats\librairies\invmenu\session\InvMenuInfo;
-use zenostats\librairies\invmenu\session\network\handler\PlayerNetworkHandler;
-use zenostats\librairies\invmenu\session\PlayerSession;
+use stats\librairies\invmenu\session\InvMenuInfo;
+use stats\librairies\invmenu\session\network\handler\PlayerNetworkHandler;
+use stats\librairies\invmenu\session\PlayerSession;
 use pocketmine\block\inventory\BlockInventory;
 use pocketmine\inventory\Inventory;
 use pocketmine\network\mcpe\NetworkSession;

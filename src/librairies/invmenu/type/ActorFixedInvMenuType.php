@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\invmenu\type;
+namespace stats\librairies\invmenu\type;
 
-use zenostats\librairies\invmenu\inventory\InvMenuInventory;
-use zenostats\librairies\invmenu\InvMenu;
-use zenostats\librairies\invmenu\type\graphic\ActorInvMenuGraphic;
-use zenostats\librairies\invmenu\type\graphic\InvMenuGraphic;
-use zenostats\librairies\invmenu\type\graphic\network\InvMenuGraphicNetworkTranslator;
+use stats\librairies\invmenu\inventory\InvMenuInventory;
+use stats\librairies\invmenu\InvMenu;
+use stats\librairies\invmenu\type\graphic\ActorInvMenuGraphic;
+use stats\librairies\invmenu\type\graphic\InvMenuGraphic;
+use stats\librairies\invmenu\type\graphic\network\InvMenuGraphicNetworkTranslator;
 use pocketmine\inventory\Inventory;
 use pocketmine\network\mcpe\protocol\types\entity\MetadataProperty;
 use pocketmine\player\Player;

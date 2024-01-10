@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\invmenu\type\util\builder;
+namespace stats\librairies\invmenu\type\util\builder;
 
-use zenostats\librairies\invmenu\type\graphic\network\InvMenuGraphicNetworkTranslator;
-use zenostats\librairies\invmenu\type\graphic\network\MultiInvMenuGraphicNetworkTranslator;
-use zenostats\librairies\invmenu\type\graphic\network\WindowTypeInvMenuGraphicNetworkTranslator;
+use stats\librairies\invmenu\type\graphic\network\InvMenuGraphicNetworkTranslator;
+use stats\librairies\invmenu\type\graphic\network\MultiInvMenuGraphicNetworkTranslator;
+use stats\librairies\invmenu\type\graphic\network\WindowTypeInvMenuGraphicNetworkTranslator;
 
 trait GraphicNetworkTranslatableInvMenuTypeBuilderTrait{
 

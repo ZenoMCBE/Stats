@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\invmenu\type\util;
+namespace stats\librairies\invmenu\type\util;
 
 use Generator;
 use pocketmine\block\tile\Chest;

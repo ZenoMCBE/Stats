@@ -26,9 +26,9 @@
  *
  */
 
-namespace zenostats\librairies\commando\traits;
+namespace stats\librairies\commando\traits;
 
-use zenostats\librairies\commando\args\BaseArgument;
+use stats\librairies\commando\args\BaseArgument;
 use pocketmine\command\CommandSender;
 
 interface IArgumentable

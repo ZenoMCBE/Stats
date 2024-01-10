@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\invmenu\type;
+namespace stats\librairies\invmenu\type;
 
 interface InvMenuTypeIds{
 

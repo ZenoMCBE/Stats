@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\invmenu\session;
+namespace stats\librairies\invmenu\session;
 
 use Closure;
-use zenostats\librairies\invmenu\session\network\PlayerNetwork;
+use stats\librairies\invmenu\session\network\PlayerNetwork;
 use pocketmine\player\Player;
 use function spl_object_id;
 

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\invmenu\type;
+namespace stats\librairies\invmenu\type;
 
-use zenostats\librairies\invmenu\type\util\InvMenuTypeBuilders;
+use stats\librairies\invmenu\type\util\InvMenuTypeBuilders;
 use pocketmine\block\VanillaBlocks;
 use pocketmine\network\mcpe\protocol\types\inventory\WindowTypes;
 

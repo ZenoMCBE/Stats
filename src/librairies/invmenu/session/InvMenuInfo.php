@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\invmenu\session;
+namespace stats\librairies\invmenu\session;
 
-use zenostats\librairies\invmenu\InvMenu;
-use zenostats\librairies\invmenu\type\graphic\InvMenuGraphic;
+use stats\librairies\invmenu\InvMenu;
+use stats\librairies\invmenu\type\graphic\InvMenuGraphic;
 
 final class InvMenuInfo{
 

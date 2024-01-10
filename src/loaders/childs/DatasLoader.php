@@ -1,13 +1,13 @@
 <?php
 
-namespace zenostats\loaders\childs;
+namespace stats\loaders\childs;
 
 use JsonException;
-use zenostats\datas\DataCache;
-use zenostats\loaders\Loader;
-use zenostats\managers\EloManager;
-use zenostats\managers\StatsManager;
-use zenostats\ZenoStats;
+use stats\datas\DataCache;
+use stats\loaders\Loader;
+use stats\managers\EloManager;
+use stats\managers\StatsManager;
+use stats\Stats;
 
 final class DatasLoader implements Loader {
 
@@ -24,7 +24,7 @@ final class DatasLoader implements Loader {
                 $class->loadCache();
             }
         }
-        ZenoStats::getInstance()->getLogger()->notice("[Data] " . count($classes) . " fichier(s) de donnée(s) chargé(s) !");
+        Stats::getInstance()->getLogger()->notice("[Data] " . count($classes) . " fichier(s) de donnée(s) chargé(s) !");
     }
 
     /**
@@ -41,7 +41,7 @@ final class DatasLoader implements Loader {
                 $class->unloadCache();
             }
         }
-        ZenoStats::getInstance()->getLogger()->notice("[Data] " . count($classes) . " fichier(s) de donnée(s) déchargé(s) !");
+        Stats::getInstance()->getLogger()->notice("[Data] " . count($classes) . " fichier(s) de donnée(s) déchargé(s) !");
     }
 
 }

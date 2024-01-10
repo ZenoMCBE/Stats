@@ -1,14 +1,14 @@
 <?php
 
-namespace zenostats\managers;
+namespace stats\managers;
 
 use JsonException;
 use pocketmine\player\Player;
 use pocketmine\utils\Config;
 use pocketmine\utils\SingletonTrait;
-use zenostats\datas\DataCache;
-use zenostats\datas\DefaultDataCache;
-use zenostats\utils\Utils;
+use stats\datas\DataCache;
+use stats\datas\DefaultDataCache;
+use stats\utils\Utils;
 
 final class EloManager implements DataCache, DefaultDataCache {
 

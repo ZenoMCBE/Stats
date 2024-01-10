@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\invmenu;
+namespace stats\librairies\invmenu;
 
 use Closure;
 use LogicException;
-use zenostats\librairies\invmenu\inventory\SharedInvMenuSynchronizer;
-use zenostats\librairies\invmenu\session\InvMenuInfo;
-use zenostats\librairies\invmenu\session\network\PlayerNetwork;
-use zenostats\librairies\invmenu\transaction\DeterministicInvMenuTransaction;
-use zenostats\librairies\invmenu\transaction\InvMenuTransaction;
-use zenostats\librairies\invmenu\transaction\InvMenuTransactionResult;
-use zenostats\librairies\invmenu\transaction\SimpleInvMenuTransaction;
-use zenostats\librairies\invmenu\type\InvMenuType;
-use zenostats\librairies\invmenu\type\InvMenuTypeIds;
+use stats\librairies\invmenu\inventory\SharedInvMenuSynchronizer;
+use stats\librairies\invmenu\session\InvMenuInfo;
+use stats\librairies\invmenu\session\network\PlayerNetwork;
+use stats\librairies\invmenu\transaction\DeterministicInvMenuTransaction;
+use stats\librairies\invmenu\transaction\InvMenuTransaction;
+use stats\librairies\invmenu\transaction\InvMenuTransactionResult;
+use stats\librairies\invmenu\transaction\SimpleInvMenuTransaction;
+use stats\librairies\invmenu\type\InvMenuType;
+use stats\librairies\invmenu\type\InvMenuTypeIds;
 use pocketmine\inventory\Inventory;
 use pocketmine\inventory\transaction\action\SlotChangeAction;
 use pocketmine\inventory\transaction\InventoryTransaction;

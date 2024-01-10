@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\invmenu\type\util;
+namespace stats\librairies\invmenu\type\util;
 
-use zenostats\librairies\invmenu\type\util\builder\ActorFixedInvMenuTypeBuilder;
-use zenostats\librairies\invmenu\type\util\builder\BlockActorFixedInvMenuTypeBuilder;
-use zenostats\librairies\invmenu\type\util\builder\BlockFixedInvMenuTypeBuilder;
-use zenostats\librairies\invmenu\type\util\builder\DoublePairableBlockActorFixedInvMenuTypeBuilder;
+use stats\librairies\invmenu\type\util\builder\ActorFixedInvMenuTypeBuilder;
+use stats\librairies\invmenu\type\util\builder\BlockActorFixedInvMenuTypeBuilder;
+use stats\librairies\invmenu\type\util\builder\BlockFixedInvMenuTypeBuilder;
+use stats\librairies\invmenu\type\util\builder\DoublePairableBlockActorFixedInvMenuTypeBuilder;
 
 final class InvMenuTypeBuilders{
 

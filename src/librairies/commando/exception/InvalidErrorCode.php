@@ -26,7 +26,7 @@
  *
  */
 
-namespace zenostats\librairies\commando\exception;
+namespace stats\librairies\commando\exception;
 
 class InvalidErrorCode extends CommandoException
 {

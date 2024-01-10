@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace zenostats\librairies\formapi;
+namespace stats\librairies\formapi;
 
 use pocketmine\form\FormValidationException;
 

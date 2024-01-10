@@ -1,19 +1,19 @@
 <?php
 
-namespace zenostats\forms;
+namespace stats\forms;
 
 use pocketmine\player\Player;
 use pocketmine\utils\SingletonTrait;
-use zenostats\librairies\formapi\CustomForm;
-use zenostats\librairies\formapi\Form;
-use zenostats\librairies\formapi\ModalForm;
-use zenostats\librairies\formapi\SimpleForm;
-use zenostats\managers\EloManager;
-use zenostats\managers\LeagueManager;
-use zenostats\managers\StatsManager;
-use zenostats\utils\Constants;
-use zenostats\utils\ids\StatsIds;
-use zenostats\utils\Utils;
+use stats\librairies\formapi\CustomForm;
+use stats\librairies\formapi\Form;
+use stats\librairies\formapi\ModalForm;
+use stats\librairies\formapi\SimpleForm;
+use stats\managers\EloManager;
+use stats\managers\LeagueManager;
+use stats\managers\StatsManager;
+use stats\utils\Constants;
+use stats\utils\ids\StatsIds;
+use stats\utils\Utils;
 
 final class LeaderboardForms {
 

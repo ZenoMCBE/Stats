@@ -26,12 +26,12 @@
  *
  */
 
-namespace zenostats\librairies\commando\traits;
+namespace stats\librairies\commando\traits;
 
-use zenostats\librairies\commando\args\BaseArgument;
-use zenostats\librairies\commando\args\TextArgument;
-use zenostats\librairies\commando\BaseCommand;
-use zenostats\librairies\commando\exception\ArgumentOrderException;
+use stats\librairies\commando\args\BaseArgument;
+use stats\librairies\commando\args\TextArgument;
+use stats\librairies\commando\BaseCommand;
+use stats\librairies\commando\exception\ArgumentOrderException;
 use pocketmine\command\CommandSender;
 use pocketmine\utils\TextFormat;
 use function array_slice;

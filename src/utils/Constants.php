@@ -1,6 +1,6 @@
 <?php
 
-namespace zenostats\utils;
+namespace stats\utils;
 
 interface Constants {
 

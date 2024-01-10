@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\simplepackethandler;
+namespace stats\librairies\simplepackethandler;
 
 use InvalidArgumentException;
-use zenostats\librairies\simplepackethandler\interceptor\IPacketInterceptor;
-use zenostats\librairies\simplepackethandler\interceptor\PacketInterceptor;
-use zenostats\librairies\simplepackethandler\monitor\IPacketMonitor;
-use zenostats\librairies\simplepackethandler\monitor\PacketMonitor;
+use stats\librairies\simplepackethandler\interceptor\IPacketInterceptor;
+use stats\librairies\simplepackethandler\interceptor\PacketInterceptor;
+use stats\librairies\simplepackethandler\monitor\IPacketMonitor;
+use stats\librairies\simplepackethandler\monitor\PacketMonitor;
 use pocketmine\event\EventPriority;
 use pocketmine\plugin\Plugin;
 

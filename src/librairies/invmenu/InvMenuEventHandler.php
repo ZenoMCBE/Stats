@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\invmenu;
+namespace stats\librairies\invmenu;
 
-use zenostats\librairies\invmenu\session\network\PlayerNetwork;
-use zenostats\librairies\invmenu\session\PlayerManager;
+use stats\librairies\invmenu\session\network\PlayerNetwork;
+use stats\librairies\invmenu\session\PlayerManager;
 use pocketmine\event\inventory\InventoryCloseEvent;
 use pocketmine\event\inventory\InventoryTransactionEvent;
 use pocketmine\event\Listener;

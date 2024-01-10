@@ -1,10 +1,10 @@
 <?php
 
-namespace zenostats\loaders\childs;
+namespace stats\loaders\childs;
 
-use zenostats\loaders\Loader;
-use zenostats\managers\ProvidersManager;
-use zenostats\ZenoStats;
+use stats\loaders\Loader;
+use stats\managers\ProvidersManager;
+use stats\Stats;
 
 final class ProvidersLoader implements Loader {
 
@@ -14,7 +14,7 @@ final class ProvidersLoader implements Loader {
     public function onLoad(): void {
         $providerApi = ProvidersManager::getInstance();
         $providerApi->loadProviders();
-        ZenoStats::getInstance()->getLogger()->notice("[Provider] " . $providerApi->getProviderCount() . " structure(s) de donnée(s) chargée(s) !");
+        Stats::getInstance()->getLogger()->notice("[Provider] " . $providerApi->getProviderCount() . " structure(s) de donnée(s) chargée(s) !");
     }
 
     /**

@@ -26,9 +26,9 @@
  *
  */
 
-namespace zenostats\librairies\commando;
+namespace stats\librairies\commando;
 
-use zenostats\librairies\commando\constraint\BaseConstraint;
+use stats\librairies\commando\constraint\BaseConstraint;
 
 /**
  * Interface IRunnable

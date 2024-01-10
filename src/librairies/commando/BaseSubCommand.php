@@ -26,7 +26,7 @@
  *
  */
 
-namespace zenostats\librairies\commando;
+namespace stats\librairies\commando;
 
 use pocketmine\plugin\PluginBase;
 

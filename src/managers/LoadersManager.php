@@ -1,13 +1,13 @@
 <?php
 
-namespace zenostats\managers;
+namespace stats\managers;
 
 use JsonException;
 use pocketmine\utils\SingletonTrait;
-use zenostats\loaders\childs\DatasLoader;
-use zenostats\loaders\childs\ProvidersLoader;
-use zenostats\loaders\Loader;
-use zenostats\ZenoStats;
+use stats\loaders\childs\DatasLoader;
+use stats\loaders\childs\ProvidersLoader;
+use stats\loaders\Loader;
+use stats\Stats;
 
 final class LoadersManager {
 
@@ -26,7 +26,7 @@ final class LoadersManager {
                 $loader->onLoad();
             }
         }
-        ZenoStats::getInstance()->getLogger()->notice("[Loader] " . count($loaders) ." chargeur(s) enregistré(s) !");
+        Stats::getInstance()->getLogger()->notice("[Loader] " . count($loaders) ." chargeur(s) enregistré(s) !");
     }
 
     /**
@@ -42,7 +42,7 @@ final class LoadersManager {
                 $loader->onUnload();
             }
         }
-        ZenoStats::getInstance()->getLogger()->notice("[Loader] " . count($loaders) ." chargeur(s) oublié(s) !");
+        Stats::getInstance()->getLogger()->notice("[Loader] " . count($loaders) ." chargeur(s) oublié(s) !");
     }
 
 }

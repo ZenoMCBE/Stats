@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace zenostats\librairies\invmenu\type;
+namespace stats\librairies\invmenu\type;
 
-use zenostats\librairies\invmenu\InvMenu;
-use zenostats\librairies\invmenu\type\graphic\InvMenuGraphic;
+use stats\librairies\invmenu\InvMenu;
+use stats\librairies\invmenu\type\graphic\InvMenuGraphic;
 use pocketmine\inventory\Inventory;
 use pocketmine\player\Player;
 

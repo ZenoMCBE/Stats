@@ -1,6 +1,6 @@
 <?php
 
-namespace zenostats\loaders;
+namespace stats\loaders;
 
 interface Loader {
 

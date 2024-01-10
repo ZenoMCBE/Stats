@@ -1,11 +1,11 @@
 <?php
 
-namespace zenostats\managers;
+namespace stats\managers;
 
 use pocketmine\player\Player;
 use pocketmine\utils\SingletonTrait;
-use zenostats\utils\ids\LeagueIds;
-use zenostats\utils\Utils;
+use stats\utils\ids\LeagueIds;
+use stats\utils\Utils;
 
 final class LeagueManager {
 
