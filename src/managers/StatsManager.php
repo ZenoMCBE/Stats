@@ -26,10 +26,7 @@ final class StatsManager implements DataCache, DefaultDataCache {
      * @return void
      */
     public function loadCache(): void {
-        $providerData = $this->getProvider()->getAll();
-        foreach ($providerData as $key => $value) {
-            $this->cache[$key] = $value;
-        }
+        $this->cache = $this->getProvider()->getAll();
     }
 
     /**
@@ -148,169 +145,180 @@ final class StatsManager implements DataCache, DefaultDataCache {
 
     /**
      * @param string|Player $player
-     * @return int|float
+     * @return int|float|null
      */
-    public function calculateKdr(string|Player $player): int|float {
+    public function calculateKdr(string|Player $player): int|float|null {
         $playerName = Utils::getPlayerName($player, true);
         $kill = max(0, $this->get($playerName, StatsIds::KILL));
         $death = max(0, $this->get($playerName, StatsIds::DEATH));
-        return ($kill > 0 && $death > 0) ? round($kill / $death, 2) : 0;
+        return ($kill > 0 && $death > 0) ? round($kill / $death, 2) : null;
     }
 
     /**
      * @param string|Player $player
-     * @return int|float
+     * @return int|float|null
      */
-    public function calculateKadr(string|Player $player): int|float {
+    public function calculateKadr(string|Player $player): int|float|null {
         $playerName = Utils::getPlayerName($player, true);
         $kill = max(0, $this->get($playerName, StatsIds::KILL));
         $assist = max(0, $this->get($playerName, StatsIds::ASSIST));
         $death = max(0, $this->get($playerName, StatsIds::DEATH));
-        return (($kill > 0 || $assist > 0) && $death > 0) ? round(($kill + $assist) / $death, 2) : 0;
+        return (($kill > 0 || $assist > 0) && $death > 0) ? round(($kill + $assist) / $death, 2) : null;
     }
 
     /**
      * @param string|Player $player
-     * @return int
+     * @return int|null
      */
-    public function calculateKillPerGame(string|Player $player): int {
+    public function calculateKillPerGame(string|Player $player): ?int {
         $playerName = Utils::getPlayerName($player, true);
         $played = max(0, $this->get($playerName, StatsIds::PLAYED));
         $kill = max(0, $this->get($playerName, StatsIds::KILL));
-        return ($played > 0 && $kill > 0) ? round($kill / $played) : 0;
+        return ($played > 0 && $kill > 0) ? round($kill / $played) : null;
     }
 
     /**
      * @param string|Player $player
-     * @return int
+     * @return int|null
      */
-    public function calculateKillAssistPerGame(string|Player $player): int {
+    public function calculateKillAssistPerGame(string|Player $player): ?int {
         $playerName = Utils::getPlayerName($player, true);
         $played = max(0, $this->get($playerName, StatsIds::PLAYED));
         $kill = max(0, $this->get($playerName, StatsIds::KILL));
         $assist = max(0, $this->get($playerName, StatsIds::ASSIST));
-        return ($played > 0 && ($kill > 0 || $assist > 0)) ? round(($kill + $assist) / $played) : 0;
+        return ($played > 0 && ($kill > 0 || $assist > 0)) ? round(($kill + $assist) / $played) : null;
     }
 
     /**
      * @param string|Player $player
-     * @return int
+     * @return int|null
      */
-    public function calculateDeathPerGame(string|Player $player): int {
+    public function calculateDeathPerGame(string|Player $player): ?int {
         $playerName = Utils::getPlayerName($player, true);
         $played = max(0, $this->get($playerName, StatsIds::PLAYED));
         $death = max(0, $this->get($playerName, StatsIds::DEATH));
-        return ($played > 0 && $death > 0) ? round($death / $played) : 0;
+        return ($played > 0 && $death > 0) ? round($death / $played) : null;
     }
 
     /**
      * @param string|Player $player
-     * @return int
+     * @return int|null
      */
-    public function calculateArrowHitByArrowShotPercentage(string|Player $player): int {
+    public function calculateArrowHitByArrowShotPercentage(string|Player $player): ?int {
         $playerName = Utils::getPlayerName($player, true);
         $arrowShot = max(0, $this->get($playerName, StatsIds::ARROW_SHOT));
         $arrowHit = max(0, $this->get($playerName, StatsIds::ARROW_HIT));
-        return ($arrowShot > 0 && $arrowHit > 0) ? round(($arrowHit / $arrowShot) * 100) : 0;
+        return ($arrowShot > 0 && $arrowHit > 0) ? round(($arrowHit / $arrowShot) * 100) : null;
     }
 
     /**
      * @param string|Player $player
-     * @return int
+     * @return int|null
      */
-    public function calculateWinratePercentage(string|Player $player): int {
+    public function calculateWinratePercentage(string|Player $player): ?int {
         $playerName = Utils::getPlayerName($player, true);
         $played = max(0, $this->get($playerName, StatsIds::PLAYED));
         $win = max(0, $this->get($playerName, StatsIds::WIN));
-        return ($played > 0 && $win > 0) ? round(($win / $played) * 100) : 0;
+        return ($played > 0 && $win > 0) ? round(($win / $played) * 100) : null;
     }
 
     /**
      * @param string|Player $player
-     * @return int
+     * @return int|null
      */
-    public function calculateAverageScorePerGame(string|Player $player): int {
+    public function calculateAverageScorePerGame(string|Player $player): ?int {
         $playerName = Utils::getPlayerName($player, true);
         $played = max(0, $this->get($playerName, StatsIds::PLAYED));
         $score = max(0, $this->get($playerName, StatsIds::SCORE));
-        return ($played > 0 && $score > 0) ? round($score / $played) : 0;
+        return ($played > 0 && $score > 0) ? round($score / $played) : null;
     }
 
     /**
      * @param string|Player $player
-     * @return int
+     * @return int|null
      */
-    public function calculateAverageArrowShootPerGame(string|Player $player): int {
+    public function calculateAveragePointPerGame(string|Player $player): ?int {
+        $playerName = Utils::getPlayerName($player, true);
+        $played = max(0, $this->get($playerName, StatsIds::PLAYED));
+        $point = max(0, $this->get($playerName, StatsIds::POINT));
+        return ($played > 0 && $point > 0) ? round($point / $played) : null;
+    }
+
+    /**
+     * @param string|Player $player
+     * @return int|null
+     */
+    public function calculateAverageArrowShootPerGame(string|Player $player): ?int {
         $playerName = Utils::getPlayerName($player, true);
         $played = max(0, $this->get($playerName, StatsIds::PLAYED));
         $arrowShoot = max(0, $this->get($playerName, StatsIds::ARROW_SHOT));
-        return ($played > 0 && $arrowShoot > 0) ? round($arrowShoot / $played) : 0;
+        return ($played > 0 && $arrowShoot > 0) ? round($arrowShoot / $played) : null;
     }
 
     /**
      * @param string|Player $player
-     * @return int
+     * @return int|null
      */
-    public function calculateAverageArrowHitPerGame(string|Player $player): int {
+    public function calculateAverageArrowHitPerGame(string|Player $player): ?int {
         $playerName = Utils::getPlayerName($player, true);
         $played = max(0, $this->get($playerName, StatsIds::PLAYED));
         $arrowHit = max(0, $this->get($playerName, StatsIds::ARROW_HIT));
-        return ($played > 0 && $arrowHit > 0) ? round($arrowHit / $played) : 0;
+        return ($played > 0 && $arrowHit > 0) ? round($arrowHit / $played) : null;
     }
 
     /**
      * @param string|Player $player
-     * @return int
+     * @return int|null
      */
-    public function calculateAverageArrowBoostPerGame(string|Player $player): int {
+    public function calculateAverageArrowBoostPerGame(string|Player $player): ?int {
         $playerName = Utils::getPlayerName($player, true);
         $played = max(0, $this->get($playerName, StatsIds::PLAYED));
         $arrowBoost = max(0, $this->get($playerName, StatsIds::ARROW_BOOST));
-        return ($played > 0 && $arrowBoost > 0) ? round($arrowBoost / $played) : 0;
+        return ($played > 0 && $arrowBoost > 0) ? round($arrowBoost / $played) : null;
     }
 
     /**
      * @param string|Player $player
-     * @return int|float
+     * @return int|float|null
      */
-    public function calculateDamageDealedPerGame(string|Player $player): int|float {
+    public function calculateDamageDealedPerGame(string|Player $player): int|float|null {
         $playerName = Utils::getPlayerName($player, true);
         $played = max(0, $this->get($playerName, StatsIds::PLAYED));
         $damageDealed = max(0, $this->get($playerName, StatsIds::DAMAGE_DEALED));
-        return ($played > 0 && $damageDealed > 0) ? round($damageDealed / $played, 2) : 0;
+        return ($played > 0 && $damageDealed > 0) ? round($damageDealed / $played, 2) : null;
     }
 
     /**
      * @param string|Player $player
-     * @return int|float
+     * @return int|float|null
      */
-    public function calculateDamageTakenPerGame(string|Player $player): int|float {
+    public function calculateDamageTakenPerGame(string|Player $player): int|float|null {
         $playerName = Utils::getPlayerName($player, true);
         $played = max(0, $this->get($playerName, StatsIds::PLAYED));
         $damageTaken = max(0, $this->get($playerName, StatsIds::DAMAGE_TAKEN));
-        return ($played > 0 && $damageTaken > 0) ? round($damageTaken / $played, 2) : 0;
+        return ($played > 0 && $damageTaken > 0) ? round($damageTaken / $played, 2) : null;
     }
 
     /**
      * @param string|Player $player
-     * @return int|float
+     * @return int|float|null
      */
-    public function calculateAverageGoldenAppleEatenPerGame(string|Player $player): int|float {
+    public function calculateAverageGoldenAppleEatenPerGame(string|Player $player): int|float|null {
         $playerName = Utils::getPlayerName($player, true);
         $played = max(0, $this->get($playerName, StatsIds::PLAYED));
         $goldenAppleEaten = max(0, $this->get($playerName, StatsIds::GOLDEN_APPLE_EATEN));
-        return ($played > 0 && $goldenAppleEaten > 0) ? round($goldenAppleEaten / $played, 2) : 0;
+        return ($played > 0 && $goldenAppleEaten > 0) ? round($goldenAppleEaten / $played, 2) : null;
     }
 
     /**
      * @param string|Player $player
-     * @return int
+     * @return int|null
      */
-    public function calculateAverageCriticalHitPerGame(string|Player $player): int {
+    public function calculateAverageCriticalHitPerGame(string|Player $player): ?int {
         $playerName = Utils::getPlayerName($player, true);
         $played = max(0, $this->get($playerName, StatsIds::PLAYED));
         $criticalHit = max(0, $this->get($playerName, StatsIds::CRIT));
-        return ($played > 0 && $criticalHit > 0) ? round($criticalHit / $played) : 0;
+        return ($played > 0 && $criticalHit > 0) ? round($criticalHit / $played) : null;
     }
 
     /**
@@ -341,6 +349,7 @@ final class StatsManager implements DataCache, DefaultDataCache {
             StatsIds::ASSIST => 0,
             StatsIds::DEATH => 0,
             StatsIds::VOID_DEATH => 0,
+            StatsIds::POINT => 0,
             StatsIds::BEST_KILLSTREAK => 0,
             StatsIds::ARROW_SHOT => 0,
             StatsIds::ARROW_HIT => 0,
@@ -358,10 +367,7 @@ final class StatsManager implements DataCache, DefaultDataCache {
      */
     public function unloadCache(): void {
         $provider = $this->getProvider();
-        $provider->setAll([]);
-        foreach ($this->getCache() as $key => $value) {
-            $provider->set($key, $value);
-        }
+        $provider->setAll($this->getCache());
         $provider->save();
     }
 
@@ -380,6 +386,7 @@ final class StatsManager implements DataCache, DefaultDataCache {
             StatsIds::ASSIST => "Assistance(s)",
             StatsIds::DEATH => "Mort(s)",
             StatsIds::VOID_DEATH => "Mort(s) dans le vide",
+            StatsIds::POINT => "Point(s)",
             StatsIds::BEST_KILLSTREAK => "Meilleure série de kill(s)",
             StatsIds::ARROW_SHOT => "Flèche(s) tirée(s)",
             StatsIds::ARROW_HIT => "Flèche(s) touchée(s)",
