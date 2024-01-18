@@ -143,6 +143,7 @@ final class LeaderboardForms {
         $content .= "§l§q» §r§aAutre(s) §l§q«§r\n";
         $content .= "§fElo§8: §f" . $eloApi->get($playerName) . "\n";
         $content .= "§fLigue§8: " . $leagueApi->getLeagueColor($leagueApi->getLeague($playerName)) . $leagueApi->getLeague($playerName) . "\n";
+        $content .= "§fPoint(s)§8: " . $statsApi->get($playerName, StatsIds::POINT) . "\n";
         $content .= "§fScore total§8: §f" . $statsApi->get($playerName, StatsIds::SCORE) . "\n";
         $content .= "§fScore par partie jouée§8: §f" . $statsApi->calculateAverageScorePerGame($playerName) ?? "N/A" . "\n";
         $content .= "§fPoint(s) total§8: §f" . $statsApi->get($playerName, StatsIds::POINT) . "\n";
