@@ -146,7 +146,7 @@ final class LeaderboardForms {
         $content .= "§fScore total§8: §f" . $statsApi->get($playerName, StatsIds::SCORE) . "\n";
         $content .= "§fScore par partie jouée§8: §f" . $statsApi->calculateAverageScorePerGame($playerName) ?? "N/A" . "\n";
         $content .= "§fPoint(s) total§8: §f" . $statsApi->get($playerName, StatsIds::POINT) . "\n";
-        $content .= "§fPoint(s) par partie jouée§8: §f" . $statsApi->calculateAverageScorePerGame($playerName) ?? "N/A" . "\n";
+        $content .= "§fPoint(s) par partie jouée§8: §f" . $statsApi->calculateAveragePointPerGame($playerName) ?? "N/A" . "\n";
         $content .= "§fGapple(s) mangée(s)§8: §f" . $statsApi->get($playerName, StatsIds::GOLDEN_APPLE_EATEN) . "\n";
         $content .= "§fGapple(s) mangée(s) par partie jouée§8: §f" . $statsApi->calculateAverageGoldenAppleEatenPerGame($playerName) ?? "N/A" . "\n";
         $content .= "§fCoup(s) critique(s)§8: §f" . $statsApi->get($playerName, StatsIds::CRIT) . "\n";
